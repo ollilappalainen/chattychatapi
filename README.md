@@ -1,14 +1,13 @@
 # REST api for ChattyChat 
   * Git: https://github.com/ollilappalainen/chattychat
 
-### Technologies:
+### Technologies
   * JavaScript
   * Node.js
   * Express
   * MongoDB
 
 ### Instructions
-
   * Install local MongoDB server
   * Name your db as 'chattychatdb'
   * Run on terminal 'yarn install'
