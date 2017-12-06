@@ -5,3 +5,5 @@
   * Node.js
   * Express
   * MongoDB
+
+### Run with 'yarn start'.
