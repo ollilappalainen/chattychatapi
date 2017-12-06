@@ -1,0 +1,32 @@
+{
+  "name": "chattychatapi",
+  "version": "1.0.0",
+  "description": "REST api for ChattyChat 9000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ollilappalainen/chattychatapi.git"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "node.js",
+    "javascript",
+    "mongodb"
+  ],
+  "author": "Olli Lappalainen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ollilappalainen/chattychatapi/issues"
+  },
+  "homepage": "https://github.com/ollilappalainen/chattychatapi#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.6",
+    "nodemon": "^1.12.5"
+  }
+}
