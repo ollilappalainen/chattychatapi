@@ -7,3 +7,5 @@
   * MongoDB
 
 ### Run with 'yarn start'.
+
+GNU GENERAL PUBLIC LICENSE Version 3
