@@ -2,6 +2,23 @@
 
 var mongoose = require('mongoose'),
 Message = mongoose.model('Message');
+var express = require('express');
+var router = express.Router();
+var bodyParser = require('body-parser');
+router.use(bodyParser.urlencoded({ extended: true }));
+var Message = require('../models/message');
+
+router.post('/messages', function (req, res) {
+  Message.create({
+    username:req.body.username,
+    sent: req.body.sent,
+    message: req.body.message
+  }), 
+  function (err, message) {
+      if (err) return res.status(500).send("Problem writing to database.");
+      res.status(200).send(message);
+  }
+});
 
 exports.listMessages = function(req, res) {
   Message.find({}, function(err, task) {

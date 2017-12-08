@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/ollilappalainen/chattychatapi#readme",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "mongoose": "^4.13.6",
     "nodemon": "^1.12.5"
