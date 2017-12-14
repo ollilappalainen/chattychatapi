@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 const router = express.Router();
 const cors = require('cors');
 
@@ -27,20 +27,14 @@ router.route('/messages')
       sent: req.body.sent
     }).save(function(err, post) {
       if (err) res.send(err);
-      res.json({
-        status: 201,
-        body: post
-      });
+      res.json(post);
     });        
   })
   
   .get(function(req, res) {
     Message.find(function(err, messages) {
       if (err) res.send(err);
-      res.json({
-        status: 200,
-        body: messages
-      });
+      res.json(messages);
     });
   });
 
@@ -48,10 +42,7 @@ router.route('/messages/:message_id')
   .get(function(req, res) {
     Message.findById(req.params.message_id, function(err, message) {
       if (err) res.send(err);
-      res.json({
-        status: 200,
-        body: message
-      });
+      res.json(message);
     });
   })
 
@@ -65,10 +56,7 @@ router.route('/messages/:message_id')
 
       message.save(function(err) {
         if (err) res.send(err);
-        res.json({
-          status: 201,
-          body: message
-        });
+        res.json(message);
       });
     });
   })
@@ -78,10 +66,7 @@ router.route('/messages/:message_id')
       _id: req.params.message_id
     }, function(err, message) {
       if (err) res.send(err);
-      res.json({
-        status: 200,
-        body: 'Message deleted.'
-      });
+      res.json({Message: 'Message deleted.'});
     });
   });
 
